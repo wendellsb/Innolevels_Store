@@ -1,0 +1,11 @@
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\Wendell\Desktop\Desenvolvimento\Innolevels\Innolevels_Store\Domain\Domain\obj\Debug\net8.0\ref\Domain.dll

@@ -1,0 +1,47 @@
+﻿@model List<Domain.Entities.Produto>
+
+<div class="table-responsive mb-2 mt-0">
+  <table class="table table-sm f-size-12 table-bordered table_sti-nowrap table-hover" style="table-layout: fixed;">
+    <colgroup>
+      <col width="25">
+      <col width="100">
+      <col width="200">
+      <col width="100">
+    </colgroup>
+
+    <thead class="thead-light">
+      <tr>
+        <th class="text-center th-column-fixed">Ações</th>
+        <th class="text-center th-column-fixed">Nome</th>
+        <th class="text-center th-column-fixed">Descrição</th>
+        <th class="text-center th-column-fixed">Preço</th>
+      </tr>
+    </thead>
+
+    <tbody class="text-nowrap">
+      @foreach (var item in Model)
+      {
+        <tr>
+          <th class="text-center th-column-fixed">
+            <div class="d-flex justify-content-center gap-2">
+              <span class="fa fa-edit text-primary btn-editar"
+                    data-id="@item.Id"
+                    data-nome="@item.Nome"
+                    data-descricao="@item.Descricao" 
+                    data-preco="@item.Preco"  
+                    style="cursor:pointer;">
+            </span>
+              <span class="fa fa-trash text-danger btn-deletar" 
+                    data-id="@item.Id" 
+                    style="cursor:pointer;">
+              </span>
+            </div>
+          </th>
+          <td class="text-left truncate-tooltip">@item.Nome</td>
+          <td class="text-center truncate-tooltip">@item.Descricao</td>
+          <td class="text-center truncate-tooltip">@item.Preco</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

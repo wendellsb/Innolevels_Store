@@ -1,0 +1,55 @@
+﻿@model List<Domain.Entities.Pedido>
+@section Scripts {
+  <script src="~/js/pedido.js"></script>
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2 class="mb-0">
+    <i class="fa-solid fa-boxes-packing me-2 text-black"></i> Pedidos Realizados
+  </h2>
+  <a asp-action="Adicionar" class="btn btn-outline-success">
+    <i class="bi bi-plus-circle"></i> Novo Pedido
+  </a>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-hover align-middle shadow-sm border rounded">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col" width="25" >Ações</th>
+        <th scope="col">Itens</th>
+        <th scope="col">Total</th>
+        <th scope="col">Data do Pedido</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var p in Model)
+      {
+        <tr>
+          <td class="align-middle text-center">
+            <span class="fa fa-trash text-danger btn-deletar-pedido d-inline-flex align-items-center "
+                  data-pedido-id="@p.Id"
+                  style="cursor: pointer; height: 100%; min-height: 40px;">
+            </span>
+          </td>
+          <td>
+            <ul class="list-unstyled mb-0">
+              
+              @foreach (var i in p.Itens)
+              {
+                <li>
+                  <span class="fw-bold">@i.Produto.Nome</span> x @i.Quantidade
+                  <span class="text-muted">(@i.Total.ToString("C"))</span>
+                </li>
+              }
+            </ul>
+          </td>
+          <td class="fw-semibold text-success">@p.Total.ToString("C")</td>
+          <td>
+            @p.DataCriacao.ToString("dd/MM/yyyy")
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

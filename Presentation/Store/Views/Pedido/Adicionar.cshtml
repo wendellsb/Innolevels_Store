@@ -1,0 +1,43 @@
+﻿@{
+  var produtos = (List<Domain.Entities.Produto>)ViewBag.Produtos;
+}
+@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="mb-4 display-6 fw-semibold"><i class="bi bi-bag-plus-fill me-2"></i>Novo Pedido</h2>
+
+@Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+<form asp-action="Adicionar" method="post">
+  <div class="row g-3">
+    @for (int i = 0; i < produtos.Count; i++)
+    {
+      <input type="hidden" name="Itens[@i].ProdutoId" value="@produtos[i].Id" />
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 hover-shadow transition">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-2 text-black">
+              <i class="bi bi-box-seam me-1"></i> @produtos[i].Nome
+            </h5>
+            <p class="card-text text-muted small mb-3">
+              Valor da Unidade: <strong>@produtos[i].Preco.ToString("C")</strong>
+            </p>
+
+            <div class="input-group input-group-sm">
+              <span class="input-group-text bg-light">Quantidade total
+
+              </span>
+              <input type="number" name="Itens[@i].Quantidade" class="form-control" value="0" min="0" />
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="text-end mt-5">
+    <button type="submit" class="btn btn-success btn-lg px-4 shadow">
+      <i class="bi bi-cart-check-fill me-2"></i>Criar Pedido
+    </button>
+  </div>
+</form>

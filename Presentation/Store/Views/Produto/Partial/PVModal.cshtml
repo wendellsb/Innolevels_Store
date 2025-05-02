@@ -1,0 +1,42 @@
+﻿<div class="modal fade" id="modalAdicionarProduto" tabindex="-1" aria-labelledby="modalAdicionarProdutoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAdicionarProdutoLabel">Adicionar Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="formAdicionarProduto">
+          <input type="hidden" id="id" name="Id" />
+          <div class="container">
+            <div class="row mb-3">
+              <!-- Nome -->
+              <div class="col-md-6">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" id="nome" name="Nome" class="form-control" placeholder="Nome do produto">
+              </div>
+
+              <!-- Preço -->
+              <div class="col-md-6">
+                <label for="preco" class="form-label">Preço</label>
+                <input type="text" id="preco" name="Preco" class="form-control" placeholder="Ex: 99,90">
+              </div>
+            </div>
+
+            <!-- Descrição -->
+            <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição</label>
+              <textarea id="descricao" name="Descricao" class="form-control" rows="3" placeholder="Insira a descrição do produto..."></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary" form="formAdicionarProduto">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>

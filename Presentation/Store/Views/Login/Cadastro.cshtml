@@ -1,0 +1,35 @@
+﻿<div class="d-flex justify-content-center align-items-center bg-light">
+  <div class="card shadow p-4" style="width: 100%; max-width: 400px; border-radius: 1rem;">
+   
+    @if (TempData["MensagemErro"] != null)
+    {
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["MensagemErro"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    }
+
+    <h3 class="text-center mb-4">Cadastro de Usuário</h3>
+    <form asp-action="Cadastro" method="post">
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required placeholder="Digite seu email" />
+      </div>
+      
+      <div class="mb-3">
+        <label for="Senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="Senha" name="Senha" required placeholder="Digite sua senha" />
+      </div>
+      
+      <div class="mb-4">
+        <label for="Perfil" class="form-label">Perfil</label>
+        <select class="form-select" id="Perfil" name="Perfil" required>
+          <option value="1">Administrador</option>
+          <option value="2" selected>Padrão</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 rounded-pill">Cadastrar</button>
+    </form>
+  </div>
+</div>
